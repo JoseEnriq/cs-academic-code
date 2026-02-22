@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\Faculdade\Fundamentos IV\tarefa2\Project1\main.cpp(38,8): error C2131: expression did not evaluate to a constant
+C:\Faculdade\Fundamentos IV\tarefa2\Project1\main.cpp(38,8): message : failure was caused by a read of a variable outside its lifetime
+C:\Faculdade\Fundamentos IV\tarefa2\Project1\main.cpp(38,8): message : see usage of 'n'
+C:\Faculdade\Fundamentos IV\tarefa2\Project1\main.cpp(38,11): error C2131: expression did not evaluate to a constant
+C:\Faculdade\Fundamentos IV\tarefa2\Project1\main.cpp(38,11): message : failure was caused by a read of a variable outside its lifetime
+C:\Faculdade\Fundamentos IV\tarefa2\Project1\main.cpp(38,11): message : see usage of 'n'
+C:\Faculdade\Fundamentos IV\tarefa2\Project1\main.cpp(38,17): error C2131: expression did not evaluate to a constant
+C:\Faculdade\Fundamentos IV\tarefa2\Project1\main.cpp(38,17): message : failure was caused by a read of a variable outside its lifetime
+C:\Faculdade\Fundamentos IV\tarefa2\Project1\main.cpp(38,17): message : see usage of 'n'

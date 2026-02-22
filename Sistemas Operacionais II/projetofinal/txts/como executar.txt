@@ -1,0 +1,13 @@
+1. Compile o código do escalonador com um compilador C, como gcc:
+	gcc -o scheduler scheduler.c
+
+2. Compile o bootloader com o NASM:
+	nasm -f bin -o bootloader.bin bootloader.asm
+
+3. Crie uma imagem de disco e copie o bootloader para o primeiro setor:
+	dd if=/dev/zero of=disk.img bs=512 count=2880
+	dd if=bootloader.bin of=disk.img bs=512 count=1 conv=notrunc
+
+4. Executar no VirtualBox
+	VBoxManage convertdd disk.img disk.vdi --format VDI
+

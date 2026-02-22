@@ -1,0 +1,6 @@
+﻿  mainCliente.cpp
+C:\Faculdade\Tecnicas de programação II\ProjetoFinal\Cliente\Fisica.h(63,26): warning C4018: '<': signed/unsigned mismatch
+C:\Faculdade\Tecnicas de programação II\ProjetoFinal\Cliente\Fisica.h(75,27): warning C4018: '<': signed/unsigned mismatch
+C:\Faculdade\Tecnicas de programação II\ProjetoFinal\Cliente\Juridica.h(113,36): warning C4101: 'erro': unreferenced local variable
+C:\Faculdade\Tecnicas de programação II\ProjetoFinal\Cliente\ListCDE.h(217): warning C4715: 'ListCDE<Pessoa>::removerCliente': not all control paths return a value
+  Cliente.vcxproj -> C:\Faculdade\Tecnicas de programação II\ProjetoFinal\Cliente\Debug\Cliente.exe

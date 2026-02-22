@@ -1,0 +1,15 @@
+release/consultor.o
+release/consultordao.o
+release/endereco.o
+release/main.o
+release/projeto.o
+release/teladealteracoes.o
+release/telainclusao.o
+release/telaprincipal.o
+release/telaprojeto.o
+release/telefone.o
+release/qrc_ArquivoDeRecursos.o
+release/moc_teladealteracoes.o
+release/moc_telainclusao.o
+release/moc_telaprincipal.o
+release/moc_telaprojeto.o

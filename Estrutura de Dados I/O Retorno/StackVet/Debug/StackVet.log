@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Faculdade\Estrutura de Dados I\O Retorno\StackVet\StackVet.h(63): warning C4715: 'StackVet::pop': not all control paths return a value
+  StackVet.vcxproj -> C:\Faculdade\Estrutura de Dados I\O Retorno\StackVet\Debug\StackVet.exe

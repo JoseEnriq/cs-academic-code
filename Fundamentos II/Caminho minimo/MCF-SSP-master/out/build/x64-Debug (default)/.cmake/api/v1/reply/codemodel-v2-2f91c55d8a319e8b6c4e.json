@@ -1,0 +1,101 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "MCF-SSP",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "arc_layout::@36f028580bb02cc8272a",
+					"jsonFile" : "target-arc_layout-Debug-c505d9b8ad8861db3358.json",
+					"name" : "arc_layout",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "assignment_problem::@36f028580bb02cc8272a",
+					"jsonFile" : "target-assignment_problem-Debug-df1f56ae4d513af882bd.json",
+					"name" : "assignment_problem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gte::@36f028580bb02cc8272a",
+					"jsonFile" : "target-gte-Debug-5268aa15d84bcfc2a1d3.json",
+					"name" : "gte",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_problem::@36f028580bb02cc8272a",
+					"jsonFile" : "target-test_problem-Debug-62cda1d6c475686d4a85.json",
+					"name" : "test_problem",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Faculdade/Fundamentos II/Caminho minimo/MCF-SSP-master/out/build/x64-Debug (default)",
+		"source" : "C:/Faculdade/Fundamentos II/Caminho minimo/MCF-SSP-master"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

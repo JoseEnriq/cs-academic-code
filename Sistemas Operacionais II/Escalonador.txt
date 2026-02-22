@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_FILAS 8
+
+typedef struct {
+    int filas[MAX_FILAS][MAX_FILAS]; // Vetor de vetores para representar as filas
+    int processos[MAX_FILAS]; // Vetor para mapear processos para suas filas
+    int promover; // Variável para indicar se deve haver promoção de processo
+} Escalonador;
+
+void inicializar_escalonador(Escalonador *escalonador) {
+    for (int i = 0; i < MAX_FILAS; ++i) {
+        escalonador->processos[i] = -1; // Inicializando o mapeamento de processos como -1 (não atribuído)
+        for (int j = 0; j < MAX_FILAS; ++j) {
+            escalonador->filas[i][j] = -1; // Inicializando as filas como vazias
+        }
+    }
+    escalonador->promover = 0; // Inicializando a promoção como desativada
+}
+
+void adicionar_processo(Escalonador *escalonador, int processo_id, int fila) {
+    if (escalonador->processos[processo_id] == -1) {
+        if (fila < 0 || fila >= MAX_FILAS) {
+            printf("Fila inválida!\n");
+            return;
+        }
+        escalonador->processos[processo_id] = fila;
+        int i = 0;
+        while (escalonador->filas[fila][i] != -1) {
+            ++i; // Encontra a próxima posição vazia na fila
+        }
+        escalonador->filas[fila][i] = processo_id; // Adiciona o processo à fila
+    } else {
+        printf("Processo já existe!\n");
+    }
+}
+
+void remover_processo(Escalonador *escalonador, int processo_id) {
+    int fila = escalonador->processos[processo_id];
+    if (fila != -1) {
+        int i = 0;
+        while (escalonador->filas[fila][i] != processo_id) {
+            ++i; // Encontra a posição do processo na fila
+        }
+        while (escalonador->filas[fila][i + 1] != -1) {
+            escalonador->filas[fila][i] = escalonador->filas[fila][i + 1];
+            ++i; // Move os processos à frente uma posição para trás na fila
+        }
+        escalonador->filas[fila][i] = -1; // Remove o processo da fila
+        escalonador->processos[processo_id] = -1; // Remove o processo do mapeamento
+    } else {
+        printf("Processo não encontrado!\n");
+    }
+}
+
+void set_promover(Escalonador *escalonador, int value) {
+    escalonador->promover = value;
+}
+
+void promover_processo(Escalonador *escalonador, int processo_id) {
+    int fila = escalonador->processos[processo_id];
+    if (fila != -1) {
+        if (fila > 0 && escalonador->promover) {
+            remover_processo(escalonador, processo_id); // Remove o processo da fila atual
+            adicionar_processo(escalonador, processo_id, fila - 1); // Adiciona o processo à fila de prioridade mais alta
+        }
+    } else {
+        printf("Processo não encontrado!\n");
+    }
+}
+
+int escalonar(Escalonador *escalonador) {
+    for (int i = 0; i < MAX_FILAS; ++i) {
+        if (escalonador->filas[i][0] != -1) {
+            return escalonador->filas[i][0]; // Retorna o primeiro processo da fila não vazia
+        }
+    }
+    return -1; // Retorna -1 se todas as filas estiverem vazias
+}
+
+int main() {
+    Escalonador escalonador;
+    inicializar_escalonador(&escalonador);
+    adicionar_processo(&escalonador, 1, 0); // Adiciona processo 1 à fila 0
+    adicionar_processo(&escalonador, 2, 1); // Adiciona processo 2 à fila 1
+    adicionar_processo(&escalonador, 3, 2); // Adiciona processo 3 à fila 2
+
+    set_promover(&escalonador, 1); // Habilita a promoção de processos
+    promover_processo(&escalonador, 1); // Promove o processo 1 para uma fila de prioridade mais alta
+
+    printf("Processo escalonado: %d\n", escalonar(&escalonador)); // Retorna o processo escalonado
+
+    return 0;
+}

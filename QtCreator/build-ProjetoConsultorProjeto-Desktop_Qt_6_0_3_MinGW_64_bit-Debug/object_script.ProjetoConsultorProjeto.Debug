@@ -1,0 +1,15 @@
+debug/consultor.o
+debug/consultordao.o
+debug/endereco.o
+debug/main.o
+debug/projeto.o
+debug/teladealteracoes.o
+debug/telainclusao.o
+debug/telaprincipal.o
+debug/telaprojeto.o
+debug/telefone.o
+debug/qrc_ArquivoDeRecursos.o
+debug/moc_teladealteracoes.o
+debug/moc_telainclusao.o
+debug/moc_telaprincipal.o
+debug/moc_telaprojeto.o

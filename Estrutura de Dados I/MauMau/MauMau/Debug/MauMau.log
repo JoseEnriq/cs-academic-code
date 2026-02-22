@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Faculdade\Estrutura de Dados I\MauMau\MauMau\Stack.h(101): warning C4715: 'Stack<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::Top': not all control paths return a value
+C:\Faculdade\Estrutura de Dados I\MauMau\MauMau\ListCDE.h(172): warning C4715: 'ListCDE<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::search': not all control paths return a value
+  MauMau.vcxproj -> C:\Faculdade\Estrutura de Dados I\MauMau\MauMau\Debug\MauMau.exe

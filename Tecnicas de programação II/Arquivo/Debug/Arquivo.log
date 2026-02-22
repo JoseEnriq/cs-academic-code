@@ -1,0 +1,3 @@
+﻿  principal.cpp
+C:\Faculdade\Tecnicas de programação II\Arquivo\ListCDE.h(192): warning C4715: 'ListCDE<Aluno>::excluir': not all control paths return a value
+  Arquivo.vcxproj -> C:\Faculdade\Tecnicas de programação II\Arquivo\Debug\Arquivo.exe

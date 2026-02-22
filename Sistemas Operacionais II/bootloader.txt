@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+
+void exibir_instrucoes() {
+    printf("Bem-vindo ao Escalonador!\n");
+    printf("Instrucoes de Uso:\n");
+    printf("1. Adicionar processo: adicionar <ID do processo> <fila>\n");
+    printf("2. Remover processo: remover <ID do processo>\n");
+    printf("3. Promover processo: promover <ID do processo>\n");
+    printf("4. Escalonar processo: escalonar\n");
+    printf("5. Sair do escalonador: sair\n");
+}
+
+int main() {
+    exibir_instrucoes();
+
+    char comando[20];
+
+    while (1) {
+        printf("Digite um comando: ");
+        scanf("%s", comando);
+
+        if (strcmp(comando, "adicionar") == 0) {
+            int processo_id, fila;
+            scanf("%d %d", &processo_id, &fila);
+            // Implemente a lógica para adicionar o processo
+        } else if (strcmp(comando, "remover") == 0) {
+            int processo_id;
+            scanf("%d", &processo_id);
+            // Implemente a lógica para remover o processo
+        } else if (strcmp(comando, "promover") == 0) {
+            int processo_id;
+            scanf("%d", &processo_id);
+            // Implemente a lógica para promover o processo
+        } else if (strcmp(comando, "escalonar") == 0) {
+            // Implemente a lógica para escalonar o processo
+        } else if (strcmp(comando, "sair") == 0) {
+            printf("Encerrando o escalonador. Ate mais!\n");
+            break;
+        } else {
+            printf("Comando invalido. Por favor, tente novamente.\n");
+        }
+    }
+
+    return 0;
+}
